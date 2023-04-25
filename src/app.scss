@@ -10,6 +10,9 @@
         td{
             width: 20px;
             height: 20px;
-        }
+            &.selected{
+                color: rgba(231, 75, 8, 0.959);
+            }
+        }       
     }
 }

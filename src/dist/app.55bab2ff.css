@@ -14,5 +14,8 @@
   width: 20px;
   height: 20px;
 }
+.grid-area table td.selected {
+  color: rgba(231, 75, 8, 0.959);
+}
 
 /*# sourceMappingURL=/app.55bab2ff.css.map */
