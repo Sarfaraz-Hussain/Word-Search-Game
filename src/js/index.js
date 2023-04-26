@@ -1,11 +1,14 @@
 import { Grid } from "./grid";
+
 const submitWordBtn = document.querySelector(".submit-word");
+
+
 submitWordBtn.addEventListener("click", async () => {
     const grid = new Grid();
-    const commaSeparatedWords = document.querySelector("#add-word").value;
+    const commaSeperatedWords = document.querySelector("#add-word").value;
     const gridSize = document.querySelector("#grid-size").value;
-    let result = await fetchGridInfo(gridSize, commaSeparatedWords);
-    grid.words = commaSeparatedWords.split(",");
+    let result = await fetchGridInfo(gridSize, commaSeperatedWords);
+    grid.words = commaSeperatedWords.split(",");
     grid.renderGrid(gridSize, result);
     let wordListNode = document.createTextNode(grid.words);
     let wordListSection = document.querySelector(".word-list");
@@ -13,6 +16,7 @@ submitWordBtn.addEventListener("click", async () => {
         wordListSection.removeChild(wordListSection.lastChild);
     }
     wordListSection.appendChild(wordListNode);
+    
 });
 
 async function fetchGridInfo(gridSize, commaSeparatedWords) {

@@ -1,5 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
 * {
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 .grid-area {
@@ -16,6 +19,195 @@
 }
 .grid-area table td.selected {
   color: rgba(231, 75, 8, 0.959);
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 2px #ccc;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+body {
+  margin-top: 1rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 0.92s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  content: "Word Search Game";
+  font-size: 8rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.seven h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  color: #999;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.seven h1:after,
+.seven h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #c50000;
+  border-top: 1px solid #c50000;
+  height: 5px;
+  background-color: #f8f8f8;
+}
+
+.row {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  background: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.row:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -5000px;
+  height: 100%;
+  width: 15000px;
+  z-index: -1;
+  background: inherit;
+}
+.row:first-child {
+  padding: 40px 30px;
+}
+.row:nth-child(2), .row:nth-child(8), .row:nth-child(10) {
+  background: none;
+}
+.row:nth-child(3), .row:nth-child(7) {
+  background: #11f3b7;
+}
+.row:nth-child(4), .row:nth-child(6) {
+  background: #43eb87;
+}
+.row:nth-child(5) {
+  background: #B2E3AF;
+}
+.row span {
+  position: relative;
+  display: inline-block;
+  margin: 30px 10px;
+}
+
+.basic-slide {
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #05100d;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 70px;
+  transition: all 0.3s ease-in-out;
+}
+.basic-slide::-webkit-input-placeholder {
+  color: #efefef;
+  text-indent: 0;
+  font-weight: 300;
+}
+.basic-slide + label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: rgba(234, 245, 238, 0);
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.basic-slide:focus,
+.basic-slide:active {
+  color: #0f100d;
+  text-indent: 0;
+  background: #ede8e8;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.basic-slide:focus::-webkit-input-placeholder,
+.basic-slide:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+.basic-slide:focus + label,
+.basic-slide:active + label {
+  transform: translateX(-100%);
 }
 
 /*# sourceMappingURL=/app.55bab2ff.css.map */

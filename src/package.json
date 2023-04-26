@@ -1,5 +1,11 @@
 {
   "devDependencies": {
+    "cssnano": "^4.1.11",
+    "postcss": "^8.4.23",
     "sass": "^1.62.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.4",
+    "jquery-ui-dist": "^1.13.2"
   }
 }
