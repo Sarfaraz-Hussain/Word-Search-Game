@@ -1,40 +1,40 @@
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
 
 * {
-    font-family: sans-serif;
-    box-sizing: border-box;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
+
 .grid-area {
-    margin-top: 30px;
+  margin-top: 30px;
 
-    table {
-        max-width: 700px;
-        margin: auto;
-        user-select: none;
+  table {
+    max-width: 700px;
+    margin: auto;
+    user-select: none;
 
-        td {
-            width: 20px;
-            height: 20px;
+    td {
+      width: 20px;
+      height: 20px;
 
-            &.selected {
-                color: rgba(231, 75, 8, 0.959);
-            }
-        }
+      &.selected {
+        color: rgba(231, 75, 8, 0.959);
+      }
     }
+  }
 }
 
 h1 {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    text-shadow: 2px 2px 2px #ccc;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    margin-top: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 2px #ccc;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-top: 10px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
@@ -43,203 +43,350 @@ $bg-width: 50px;
 $bg-height: 50px;
 
 @-webkit-keyframes bg-scrolling-reverse {
-    100% {
-        background-position: $bg-width $bg-height;
-    }
+  100% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @-moz-keyframes bg-scrolling-reverse {
-    100% {
-        background-position: $bg-width $bg-height;
-    }
+  100% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @-o-keyframes bg-scrolling-reverse {
-    100% {
-        background-position: $bg-width $bg-height;
-    }
+  100% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @keyframes bg-scrolling-reverse {
-    100% {
-        background-position: $bg-width $bg-height;
-    }
+  100% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @-webkit-keyframes bg-scrolling {
-    0% {
-        background-position: $bg-width $bg-height;
-    }
+  0% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @-moz-keyframes bg-scrolling {
-    0% {
-        background-position: $bg-width $bg-height;
-    }
+  0% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @-o-keyframes bg-scrolling {
-    0% {
-        background-position: $bg-width $bg-height;
-    }
+  0% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 @keyframes bg-scrolling {
-    0% {
-        background-position: $bg-width $bg-height;
-    }
+  0% {
+    background-position: $bg-width $bg-height;
+  }
 }
 
 body {
-    margin-top: 1rem;
+  margin-top: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url($bg-url) repeat 0 0;
 
-    color: #999;
-    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-    text-align: center;
-    background: url($bg-url) repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse .92s infinite;
+  -moz-animation: bg-scrolling-reverse .92s infinite;
+  -o-animation: bg-scrolling-reverse .92s infinite;
+  animation: bg-scrolling-reverse .92s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 
-    -webkit-animation: bg-scrolling-reverse .92s infinite;
-    -moz-animation: bg-scrolling-reverse .92s infinite;
-    -o-animation: bg-scrolling-reverse .92s infinite;
-    animation: bg-scrolling-reverse .92s infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
+  &::before {
+    content: "Word Search Game";
 
-    &::before {
-        content: "Word Search Game";
-
-        font-size: 8rem;
-        font-weight: 700;
-        font-style: normal;
-    }
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: normal;
+  }
 }
 
-.seven h1 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    color: #999;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+// Lets play heading
 
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
-    grid-gap: 20px;
-    align-items: center;
+.seven h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  color: #999;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
 }
 
 .seven h1:after,
 .seven h1:before {
-    content: " ";
-    display: block;
-    border-bottom: 1px solid #c50000;
-    border-top: 1px solid #c50000;
-    height: 5px;
-    background-color: #f8f8f8;
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #c50000;
+  border-top: 1px solid #c50000;
+  height: 5px;
+  background-color: #f8f8f8;
 }
 
+// Input text fields
 
-@mixin epic-sides() { // https://codepen.io/MichaelArestad/pen/qltuk
-    position: relative;
-    z-index: 1;
+@mixin epic-sides() {
+  position: relative;
+  z-index: 1;
 
-    &:before {
-        position: absolute;
-        content: "";
-        display: block;
-        top: 0;
-        left: -5000px;
-        height: 100%;
-        width: 15000px;
-        z-index: -1;
-        @content;
-    }
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: -5000px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    @content;
+  }
 }
 
 
 .row {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 30px;
-    background: white;
-    @include epic-sides() {background: inherit;}
-    text-align: center;
-    
-    &:first-child {
-      padding: 40px 30px;
-    }
-    &:nth-child(2),
-    &:nth-child(8),
-    &:nth-child(10){
-      background:none;
-    }
-    &:nth-child(3),
-    &:nth-child(7) {
-      background: #11f3b7;
-    }
-    &:nth-child(4),
-    &:nth-child(6) {
-      background: #43eb87;
-    }
-    &:nth-child(5) {
-      background: #B2E3AF;
-    }
-    
-    span {
-      position: relative;
-      display: inline-block;
-      margin: 30px 10px;
-    }
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+
+  @include epic-sides() {
+    background: inherit;
   }
-  .basic-slide {
+
+  text-align: center;
+
+  &:first-child {
+    padding: 40px 30px;
+  }
+
+  &:nth-child(2),
+  &:nth-child(8),
+  &:nth-child(10) {
+    background: none;
+  }
+
+  &:nth-child(3),
+  &:nth-child(7) {
+    background: #11f3b7;
+  }
+
+  &:nth-child(4),
+  &:nth-child(6) {
+    background: #43eb87;
+  }
+
+  &:nth-child(5) {
+    background: #B2E3AF;
+  }
+
+  span {
+    position: relative;
     display: inline-block;
-    width: 215px;
-    padding: 10px 0 10px 15px;
-    font-family: "Open Sans", sans;
-    font-weight: 400;
-    color: #000806;
-    background: #d7d0d0;
-    border: 0;
-    border-radius: 3px;
-    outline: 0;
-    text-indent: 70px; // Arbitrary.
-    transition: all .3s ease-in-out;
-    
-    &::-webkit-input-placeholder {
-      color: #efefef;
-      text-indent: 0;
-      font-weight: 300;
-    }
-  
-    + label {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      padding: 10px 15px;
-      text-shadow: 0 1px 0 rgba(0, 5, 5, 0.946);
-      background: #0df56200;
-      transition: all .3s ease-in-out;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-    }
+    margin: 30px 30px;
   }
-  .basic-slide:focus,
-  .basic-slide:active {
-    color: #9ce509;
+}
+
+.basic-slide {
+  display: inline-block;
+  width: 300px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #040404;
+  background: #f3efef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 70px;
+  transition: all .3s ease-in-out;
+
+  &::-webkit-input-placeholder {
+    color: #f3efef;
     text-indent: 0;
-    background: #ede8e8;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    
-    &::-webkit-input-placeholder {
-      color: #aaa;
-    }
-    + label {
-      transform: translateX(-100%);
-    }
+    font-weight: 300;
   }
+
+  +label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 10px 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 1);
+    background: rgb(248, 180, 168);
+    transition: all .3s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+
+.basic-slide:focus,
+.basic-slide:active {
+  color: #0d0d0c;
+  text-indent: 0;
+  background: #ede8e8;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &::-webkit-input-placeholder {
+    color: #aaa;
+  }
+
+  +label {
+    transform: translateX(-100%);
+  }
+}
+
+
+.list {
+  font-size: 24px;
+  font-weight: 600;
+  color: #999;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 2px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Generate Grid Button
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+$tomato: tomato;
+$gray: #000;
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -120px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 200px;
+  border-radius: 40px;
+  background: transparent;
+  border: 3px solid $tomato;
+  color: $tomato;
+  letter-spacing: 2px;
+  text-shadow: 0;
+
+  font: {
+    size: 12px;
+    weight: bold;
+  }
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: #fff;
+    background: $tomato;
+  }
+
+  &:active {
+    letter-spacing: 2px;
+  }
+
+  &:after {
+    content: "GENERATE GRID";
+  }
+}
+
+// Footer 
+
+.footer-basic {
+  padding:40px 0;
+  color: #4b4c4d;
+  position: sticky;
+  background: rgb(248, 239, 238);
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social>a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}

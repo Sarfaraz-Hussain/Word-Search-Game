@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
 @import url(https://fonts.googleapis.com/css?family=Exo:100);
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
 * {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -75,6 +76,9 @@ h1 {
 }
 body {
   margin-top: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   color: #999;
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
@@ -90,7 +94,7 @@ body {
 }
 body::before {
   content: "Word Search Game";
-  font-size: 8rem;
+  font-size: 5rem;
   font-weight: 700;
   font-style: normal;
 }
@@ -122,7 +126,6 @@ body::before {
 .row {
   max-width: 800px;
   margin: 0 auto;
-  padding: 60px 30px;
   background: white;
   position: relative;
   z-index: 1;
@@ -135,7 +138,7 @@ body::before {
   top: 0;
   left: -5000px;
   height: 100%;
-  width: 15000px;
+  width: 100%;
   z-index: -1;
   background: inherit;
 }
@@ -157,17 +160,17 @@ body::before {
 .row span {
   position: relative;
   display: inline-block;
-  margin: 30px 10px;
+  margin: 30px 30px;
 }
 
 .basic-slide {
   display: inline-block;
-  width: 215px;
+  width: 300px;
   padding: 10px 0 10px 15px;
   font-family: "Open Sans", sans;
   font-weight: 400;
-  color: #05100d;
-  background: #efefef;
+  color: #040404;
+  background: #f3efef;
   border: 0;
   border-radius: 3px;
   outline: 0;
@@ -175,7 +178,7 @@ body::before {
   transition: all 0.3s ease-in-out;
 }
 .basic-slide::-webkit-input-placeholder {
-  color: #efefef;
+  color: #f3efef;
   text-indent: 0;
   font-weight: 300;
 }
@@ -186,8 +189,8 @@ body::before {
   left: 0;
   height: 100%;
   padding: 10px 15px;
-  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
-  background: rgba(234, 245, 238, 0);
+  text-shadow: 0 1px 0 rgb(0, 0, 0);
+  background: rgb(248, 180, 168);
   transition: all 0.3s ease-in-out;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -195,7 +198,7 @@ body::before {
 
 .basic-slide:focus,
 .basic-slide:active {
-  color: #0f100d;
+  color: #0d0d0c;
   text-indent: 0;
   background: #ede8e8;
   border-top-left-radius: 0;
@@ -208,6 +211,121 @@ body::before {
 .basic-slide:focus + label,
 .basic-slide:active + label {
   transform: translateX(-100%);
+}
+
+.list {
+  font-size: 24px;
+  font-weight: 600;
+  color: #999;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 2px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -120px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 200px;
+  border-radius: 40px;
+  background: transparent;
+  border: 3px solid tomato;
+  color: tomato;
+  letter-spacing: 2px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  color: #fff;
+  background: tomato;
+}
+button:active {
+  letter-spacing: 2px;
+}
+button:after {
+  content: "GENERATE GRID";
+}
+
+.footer-basic {
+  padding: 40px 0;
+  color: #4b4c4d;
+  position: sticky;
+  background: rgb(248, 239, 238);
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=/app.55bab2ff.css.map */

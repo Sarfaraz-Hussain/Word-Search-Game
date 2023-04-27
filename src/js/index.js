@@ -25,3 +25,4 @@ async function fetchGridInfo(gridSize, commaSeparatedWords) {
     return result.split(" ");
 }
 
+
